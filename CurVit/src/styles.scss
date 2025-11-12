@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --color-primario: #7C83B3;
+  --color-secundario: #9F8BCC;
+  --color-acento: #6C63FF;
+  --color-fondo: #F0F2F5; /* Mi recomendación */
+  --color-texto: #4A5568;
+}
+
+body {
+  background-color: var(--color-fondo);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+:root {
+  --color-primario: #7E69D2;    /* Morado azulado vibrante */
+  --color-secundario: #9580FF;  /* Más luminoso */
+  --color-acento: #5E4AE3;      /* Más profundo para contraste */
+  --color-fondo-claro: #FFFFFF; 
+  --color-fondo-oscuro: #0F1423;
+  --color-texto-claro: #2D3748;
+  --color-texto-oscuro: #F7FAFC;
+}
+
+:root {
+  /* 🌈 TUS COLORES PRINCIPALES (versión mejorada) */
+  --color-primario: #7C83B3;     /* Azul pastel suave */
+  --color-secundario: #9F8BCC;   /* Lavanda pastel */
+  --color-acento: #6C63FF;       /* Azul eléctrico para destacar */
+  
+  /* 🏔️ COLORES BASE NEUTROS */
+  --color-fondo: #F0F2F5;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #F8FAFC;
+  
+  /* 📝 COLORES DE TEXTO */
+  --color-texto-primario: #2D3748;
+  --color-texto-secundario: #718096;
+  --color-texto-terciario: #A0AEC0;
+  
+  /* 🎯 COLORES DE ESTADO */
+  --color-exito: #68D391;        /* Verde pastel */
+  --color-alerta: #F6AD55;       /* Naranja pastel */
+  --color-error: #FC8181;        /* Rojo pastel */
+  --color-info: #7C83B3;         /* Usa tu primario */
+  
+  /* 📐 BORDES Y SEPARADORES */
+  --color-borde: #E2E8F0;
+  --color-borde-2: #CBD5E1;
+  --color-divisor: #F1F5F9;
+}

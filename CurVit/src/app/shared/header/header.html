@@ -1,0 +1,34 @@
+<header class="header">
+  <nav class="nav">
+    <!-- 🔹 Logo personal -->
+    <div class="logo" routerLink="/">
+      <img src="assets/logo.png" alt="Logo personal" class="logo-img" />
+      <span class="logo-text">PauQuen</span>
+    </div>
+
+    <!-- 🔹 Navegación desktop -->
+    <ul class="nav-links">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
+      <li><a routerLink="/about" routerLinkActive="active">Sobre mí</a></li>
+      <li><a routerLink="/resume" routerLinkActive="active">Portfolio</a></li>
+      <li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+    </ul>
+
+    <!-- 🔹 Botón hamburguesa (móvil) -->
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <i class="bi" [ngClass]="menuOpen ? 'bi-x-lg' : 'bi-list'"></i>
+    </button>
+  </nav>
+
+  <!-- 🔹 Menú móvil -->
+  <div class="mobile-menu" *ngIf="menuOpen">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Inicio</a>
+    <a routerLink="/about" (click)="toggleMenu()">Sobre mí</a>
+    <a routerLink="/resume" (click)="toggleMenu()">Portfolio</a>
+    <a routerLink="/blog" (click)="toggleMenu()">Blog</a>
+    <a routerLink="/projects" (click)="toggleMenu()">Proyectos</a>
+    <a routerLink="/contact" (click)="toggleMenu()">Contacto</a>
+  </div>
+</header>

@@ -1,0 +1,107 @@
+.footer {
+  width: 100%;
+  background-color: #f9fafb;
+  color: #4b5563;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2rem clamp(2rem, 6vw, 6rem);
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  display: flex;
+  justify-content: center; /* centra el bloque interno */
+  align-items: center;
+  text-align: center;
+
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    text-align: center; /* mejora centrado visual en pantallas pequeñas */
+  }
+
+  .footer-text {
+    display: fixed;
+    text-align: center; /* centrado perfecto */
+    line-height: 1.5;
+
+    .highlight {
+      color: #7E69D2;
+      font-weight: 600;
+    }
+
+    .heart {
+      color: #ef4444;
+      font-weight: bold;
+      display: inline-block;
+      transform: translateY(2px);
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    .coffee {
+      display: inline-block;
+      transform: translateY(2px);
+      animation: steam 2s infinite ease-in-out;
+    }
+  }
+
+  .footer-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem;
+
+    a {
+      color: #4b5563;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #7E69D2;
+      }
+    }
+
+    .divider {
+      color: #9ca3af;
+    }
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1) translateY(2px);
+      opacity: 0.9;
+    }
+    50% {
+      transform: scale(1.2) translateY(2px);
+      opacity: 1;
+    }
+  }
+
+  @keyframes steam {
+    0%, 100% {
+      transform: translateY(2px) scale(1);
+      opacity: 0.9;
+    }
+    50% {
+      transform: translateY(-2px) scale(1.05);
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.8rem 2rem;
+
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+}
