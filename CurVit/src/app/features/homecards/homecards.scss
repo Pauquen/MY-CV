@@ -61,6 +61,7 @@ section {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
 }
 
+// SKILLS STYLES
 .skill-card {
   font-size: 1.1rem;
   font-family: 'Courier New', Courier, monospace;
@@ -90,6 +91,107 @@ section {
     }
   }
 }
+
+// PROJECTS STYLES
+.project-photo {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem 0 0.2rem 0;
+  max-width: 6rem;
+  height: 6rem;
+}
+
+.project-desc {
+  margin: 1rem 0 1rem 0;
+  text-align: justify;
+}
+
+.project-components {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 1rem;
+  
+  .tech-tag-a {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border: 0.1rem solid rgb(226, 57, 57);
+    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+    border-radius: 1rem;
+  }
+
+  .tech-tag-d {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border: 0.1rem solid rgb(167, 252, 69);
+    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+    border-radius: 1rem;
+  }
+
+  .tech-tag-p {
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    border: 0.1rem solid rgb(69, 144, 230);
+    padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+    border-radius: 1rem;
+  }
+}
+
+// CERTS STYLES
+.cert-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.cert-title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 3px;
+  background: rgb(120, 76, 240);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.cert-info {
+  text-align: justify;
+  margin: 1rem 0 1rem 0;
+}
+
+.cert-buttom {
+  margin: 1rem 0 0 0;
+
+  .buttom-cert {
+    background: linear-gradient(90deg, #4a90e2, rgb(120, 76, 240));
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 0.6rem 1.4rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .buttom-cert:hover {
+    background: linear-gradient(90deg, rgb(120, 76, 240), #4a90e2);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(74,144,226,0.5);
+  }
+}
+
+
+
 
 /* Contacto */
 .contact {
