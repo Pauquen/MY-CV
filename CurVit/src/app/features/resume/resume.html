@@ -1,1 +1,219 @@
-<p>resume works!</p>
+<div class="resume">
+    
+    <div class="skills-section">
+        <h2 class="s-title">Habilidades</h2>
+        <div class="s-information">
+            <p class="s-desc">
+                Me mantengo aprendiendo y adaptandome a nuevas teconologias.
+            </p>
+            <p class="s-desc2"><strong>Aqui te digo como domino lo que aprendo:</strong></p>
+        </div>
+
+        <div class="skills-grid">
+            <!-- FRONTEND -->
+            <div class="skill-card">
+                Frontend
+                <div class="skill-inner">
+                <div
+                    class="skill"
+                    *ngFor="let skill of getSkillsByCategory('Frontend')"
+                    (click)="openSkill(skill)"
+                >
+                    {{ skill.name }}
+                    <img class="img" [src]="skill.icon" [alt]="skill.name">
+                </div>
+                </div>
+            </div>
+
+            <!-- BACKEND -->
+            <div class="skill-card">
+                Backend
+                <div class="skill-inner">
+                <div
+                    class="skill"
+                    *ngFor="let skill of getSkillsByCategory('Backend')"
+                    (click)="openSkill(skill)"
+                >
+                    {{ skill.name }}
+                    <img class="img" [src]="skill.icon" [alt]="skill.name">
+                </div>
+                </div>
+            </div>
+
+            <!-- DB -->
+            <div class="skill-card">
+                Base de Datos
+                <div class="skill-inner">
+                <div
+                    class="skill"
+                    *ngFor="let skill of getSkillsByCategory('DB')"
+                    (click)="openSkill(skill)"
+                >
+                    {{ skill.name }}
+                    <img class="img" [src]="skill.icon" [alt]="skill.name">
+                </div>
+                </div>
+            </div>
+
+            <!-- IA -->
+            <div class="skill-card">
+                IA
+                <div class="skill-inner">
+                <div
+                    class="skill"
+                    *ngFor="let skill of getSkillsByCategory('IA')"
+                    (click)="openSkill(skill)"
+                >
+                    {{ skill.name }}
+                    <img class="img" [src]="skill.icon" [alt]="skill.name">
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="certs-section" id="certs-sec">
+        <h2 class="c-title">Certificaciones</h2>
+        <p class="c-desc">
+            Aqui el respaldo de lo que aprendi, algunas cosas fueron
+            por cuenta propia ;D
+        </p>
+        
+        <div class="certs-grid">
+            <div class="cert-card"
+                 *ngFor="let cert of getCerts()"
+                 (click)="openCert(cert)"
+            >
+                <h3 class="card-title">{{ cert.name }}</h3>
+                
+                <img [src]="cert.img" alt="certificado" class="cert-img">
+
+                <p class="card-desc">
+                    {{cert.desc}}
+                </p>
+            </div>
+        </div>        
+    </div>
+
+    <div class="activity-section" id="activity-sec">
+        <h2 class="a-title">Participacion y Actividad</h2>
+        <p class="a-desc">
+            Fui participe de distintos eventos de programacion (hackatones y otros), 
+            aqui un poco de lo que fue mi participacion en estos eventos.
+        </p>
+        
+        <div class="activity-grid">
+            <div class="activity-card"
+                 *ngFor="let activity of getActivities()"
+                 (click)="openActivity(activity)"
+            >
+                <h3 class="a-card-title">{{ activity.name }}</h3>
+                
+                <img [src]="activity.img" alt="actividad" class="activity-img">
+
+                <p class="a-card-desc">
+                    {{ activity.desc }}
+                </p>
+            </div>
+        </div>        
+    </div>
+
+    <!--
+    <div class="development">
+        <h2 class="d-title">Que estoy desarrollando??</h2>
+        
+        <div class="projects-development">
+
+            <div class="project">
+                <h4 class="t-project">FlowAI</h4>
+                <img src="" alt="FLOWAI-demostration">
+                <p class="project-desc">
+                FlowAI es un proyecto enfocado en implementar IA en las
+                PYMES o MYPES, permitiendo una transicion hacia la economia
+                circular.
+                </p>
+                <div class="techs">
+                    <span class="a-tech">PySpark</span>
+                    <span class="b-tech">PostGreSQL</span>
+                    <span class="c-tech">Python</span>
+                </div>
+            </div>
+
+            <div class="project">
+                <h4 class="t-project">MyCiberSpace</h4>
+                <img src="" alt="FLOWAI-demostration">
+                <p class="project-desc">
+                MyCiberSpace es una propuesta de plataforma digital
+                donde las personas que desarrollan software comparten
+                ideas y realizan equipos para abordar problemas con el
+                uso de la IA, manteniendo principios eticos con el ambiente.
+                </p>
+                <div class="techs">
+                    <span class="a-tech">Angular</span>
+                    <span class="b-tech">REST</span>
+                    <span class="c-tech">Python</span>
+                    <span class="d-tech">PostGreSQL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    -->
+
+    <div class="cv-section">
+        <h2 class="cv-title">Quieres saber mas sobre mi??</h2>
+        <div class="cv-info">
+            <p class="cv-desc">
+                Descarga mi CV para que puedas conocer mejor mi trayectoria y conocimientos.
+            </p>
+            <img src="" alt="foto-perfil-cv" class="cv-img">
+        </div>        
+    </div>
+</div>
+
+<!-- SKILL DISPLAY DE INFORMACION -->
+<div class="skill-modal" *ngIf="selectedSkill as skill" (click)="closeModal()">
+  <div class="skill-modal-content" (click)="$event.stopPropagation()">
+    <button class="close-modal" (click)="closeModal()">×</button>
+
+    <div class="skill-info">
+        <h3>{{ skill.name }}</h3>
+        <p><strong>Nivel:</strong> {{ skill.level }}</p>
+        <p>{{ skill.description }}</p>
+    </div>
+
+    <div class="skill-media">
+        <img class="s-img" [src]="skill.icon" alt="{{ skill.name }}">
+    </div>
+
+  </div>
+</div>
+
+<!-- CERT DISPLAY DE INFORMACION -->
+<div class="cert-modal" *ngIf="selectedCert as cert" (click)="closeModalCert()">
+    <div class="cert-modal-content" (click)="$event.stopPropagation()">
+        <button class="close-modal" (click)="closeModalCert()">×</button>
+        
+        <div class="cert-info">
+            <img class="c-img" [src]="cert.img" alt="{{ cert.name }}">
+        </div>
+
+    </div>
+</div>
+
+<!-- ACTIVITY DISPLAY DE INFORMACION -->
+<div class="act-modal" *ngIf="selectedActivity as act" (click)="closeModalActivity()">
+  <div class="act-modal-content" (click)="$event.stopPropagation()">
+    <button class="close-modal" (click)="closeModalActivity()">×</button>
+
+    <div class="act-info">
+        <h3>{{ act.name }}</h3>
+        <p>{{ act.desc }}</p>
+        <p><strong>Quieres saber mas?? (info o MVP):</strong> {{ act.link }}</p>
+    </div>
+
+    <div class="act-media">
+        <img class="a-img" [src]="act.img" alt="{{ act.name }}">
+    </div>
+
+  </div>
+</div>

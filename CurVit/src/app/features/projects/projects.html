@@ -1,1 +1,30 @@
-<p>projects works!</p>
+<div class="projects">
+
+    <div class="projects-presentation">
+        <h2 class="projects-title"> Proyectos </h2>
+        <p class="projects-intro">
+            Conoce algunos de mis proyectos que he desarrollado 
+        </p>
+    </div>
+
+    <div class="projects-section">
+        <div class="project-grid">
+            <div class="project-card"
+                 *ngFor="let project of getProjects()"
+                 (click)="openProject(project)"
+            > 
+                <div class="project-image-wrapper">
+                    <img [src]="project.img" alt="project-img" class="project-img"/>
+                </div>               
+                
+                <h3 class="project-title">
+                    {{ project.name }}
+                </h3>
+
+                <p class="project-phrase">
+                    {{ project.info }}
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

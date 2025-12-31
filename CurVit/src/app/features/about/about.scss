@@ -4,9 +4,199 @@
   padding-bottom: 0.5rem;
   background-color: #f9fafb;
   animation: fadeIn 1.2 ease forwards;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  // Presentation section
+  .presentation-section {
+    width: 100%;
+    max-width: 1100px;
+    padding: 6rem 2rem;
+    border-bottom: 3px solid #e5e7eb;
+
+    .p-title {
+      text-align: left;
+      font-size: 2.2rem;
+      font-weight: 600;
+    }
+
+    .p-information {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      align-items: center;
+      gap: 1.5rem;
+
+      .p-desc {
+        font-size: 1.25rem;
+        text-align: justify;
+      }
+
+      .profile-img {
+        display: flex;
+        flex-direction: column;
+        margin: auto auto auto 2rem;
+        max-width: 6rem;
+        height: 6rem;
+      }
+    }
+  }
+
+  // Trajectory of life
+  .career-section {
+    text-align: center;
+    width: 100%;
+    max-width: 1100px;
+    padding: 6rem 2rem;
+    border-bottom: 3px solid #e5e7eb;
+
+    .career-title{
+      font-size: 2.2rem;
+    }
+
+    .career-desc {
+      text-align: justify;
+      font-size: 1.10rem
+    }
+  }
+
+  // Development projects
+  .actual-development {
+    width: 100%;
+    max-width: 1100px;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 3px solid #e5e7eb;
+
+    .d-title {
+      font-size: 2.2rem;
+    }
+
+    .projects-development {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      align-items: center;
+      gap: 1.5rem;
+
+      .project {
+        background-color: white;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        align-items: center;
+
+        .project:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
+      }
+
+      .t-project {
+        font-size: 1.2rem;
+      }
+
+      .project-photo {
+        display: flex;
+        flex-direction: column;
+        margin: 0.2rem 0 0.2rem 0;
+        max-width: 6rem;
+        height: 6rem;
+      }
+
+      .project-desc {
+        margin: 1rem 0 1rem 0;
+        text-align: justify;
+      }
+
+      .techs {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+        gap: 0.6rem;
+
+        .a-tech {
+          font-size: 1rem;
+          font-family: 'Courier New', Courier, monospace;
+          text-align: center;
+          border: 0.1rem solid rgb(226, 57, 57);
+          padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+          border-radius: 1rem;
+        }
+
+        .b-tech {
+          font-size: 1rem;
+          font-family: 'Courier New', Courier, monospace;
+          text-align: center;
+          border: 0.1rem solid rgb(167, 252, 69);
+          padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+          border-radius: 1rem;
+        }
+
+        .c-tech {
+          font-size: 1rem;
+          font-family: 'Courier New', Courier, monospace;
+          text-align: center;
+          border: 0.1rem solid rgb(69, 144, 230);
+          padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+          border-radius: 1rem;
+        }
+
+        .d-tech {
+          font-size: 1rem;
+          font-family: 'Courier New', Courier, monospace;
+          text-align: center;
+          border: 0.1rem solid rgb(69, 144, 230);
+          padding: 0.25rem 0.25rem 0.25rem 0.25rem;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+
+  .work-style {
+    width: 100%;
+    max-width: 1100px;
+    padding: 6rem 2rem;
+    text-align: center;
+    border-bottom: 3px solid #e5e7eb;
+
+    .ws-title {
+      font-size: 2.2rem;
+    }
+
+    .ws-desc {
+      text-align: justify;
+    }
+  }
+
+  .contact-section {
+    width: 100%;
+    max-width: 1100px;
+    padding: 6rem 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+
+    .contact-title {
+      color: white;
+      font-size: 2.2rem;
+    }
+
+    .contact-buttom {
+      background: white;
+      color: #4f46e5;
+      padding: 0.9rem 1.8rem;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      margin-top: 1.5rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      .contact-buttom:hover {
+        background: #e0e7ff;
+      }
+    }
+  }
 }
 
-.presentation-section {
 
-
-}

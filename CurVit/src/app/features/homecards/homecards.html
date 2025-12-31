@@ -1,14 +1,14 @@
 <div class="home-container">
 
   <!-- Sección 1: Sobre mí -->
-  <section class="about">
+  <section class="about" id="about">
     <h2>Sobre mí</h2>
     <p>Soy Estudiante de Ingenieria de Sistemas, cursando actualmente el 4to semestre, poseo habilidades duras asi como habilidades blandas
        tengo conocimiento sobre frameworks de desarrollo backend y frontend, soy entusiasta y me gusta la innovacion y el espacio :v</p>
   </section>
 
   <!-- Sección 2: Habilidades -->
-  <section class="skills">
+  <section class="skills" id="skills">
     <h2>Habilidades</h2>
     <div class="skills-grid">
 
@@ -67,7 +67,7 @@
   </section>
 
   <!-- Sección 3: Proyectos -->
-  <section class="projects">
+  <section class="projects" id="projects">
     <h2>Proyectos</h2>
     <div class="projects-grid">
       <div class="project-card">Grob-Post
@@ -96,26 +96,26 @@
   </section>
 
   <!-- Sección 4: Servicios -->
-  <section class="certs">
-    <h2>Certificaciones</h2>
+  <section class="certs" id="certs">
+    <h2>Certificaciones y Actividad</h2>
     <div class="certs-grid">
       <div class="certs-card">
-        <div class="cert-title">Inteligencia Artificial</div>
+        <div class="cert-title">Certificaciones</div>
 
         <div class="cert-info">
-          <p> En esta seccion se presentan los certificados con
-              respecto a Inteligencia Artificial en distintos aspectos como
-              el manejo adecuado y actualizado de la IA.
+          <p> En esta seccion se presentan los certificados que 
+            respaldan mi formacion profesional, en los distintos ambitos 
+            donde me enfoco en desarrollar mis habilidades.
           </p>
         </div>
 
         <div class="cert-buttom">
-            <button class="buttom-cert">Hecha un vistazo</button>
+            <button class="buttom-cert" [routerLink]="['/resume']" fragment="certs-sec">Hecha un vistazo</button>
         </div>
       </div>
 
       <div class="certs-card">
-        <div class="cert-title">Participacion</div>
+        <div class="cert-title">Actividad</div>
         
         <div class="cert-info">
           <p> En esta seccion se presentan los certificados en participacion 
@@ -125,7 +125,7 @@
         </div>
 
         <div class="cert-buttom">
-            <button class="buttom-cert">Hecha un vistazo</button>
+            <button class="buttom-cert" [routerLink]="['/resume']" fragment="activity-sec">Hecha un vistazo</button>
         </div>
       </div>
 
@@ -133,10 +133,10 @@
   </section>
 
   <!-- Sección 5: Contacto -->
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2>Contacto</h2>
     <p>¿Quieres colaborar conmigo o tienes un proyecto en mente?</p>
-    <button class="contact-btn">Contáctame</button>
+    <button class="contact-btn" [routerLink]="['/contact']">Contáctame</button>
   </section>
 
 </div>
