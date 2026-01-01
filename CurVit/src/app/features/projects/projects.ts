@@ -21,20 +21,20 @@ export class Projects {
 
   projects: Project[] = [
     {
-      img: '',
+      img: '/images/projects/GROB-POST.png',
       name: 'Grob-Post',
       info: 'Web para horarios grupales e individuales y posts',
-      link: 'https://google.com',
+      link: 'https://grob-post.netlify.app/',
     },
     {
       img: '',
-      name: 'Grob-Post',
+      name: 'Desarrollando...',
       info: '...',
       link: 'https://google.com',
     },
     {
       img: '',
-      name: 'Grob-Post',
+      name: 'Desarrollando...',
       info: '...',
       link: 'https://google.com',
     },

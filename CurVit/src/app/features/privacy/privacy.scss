@@ -1,0 +1,73 @@
+.privacy-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 6rem auto 0;
+  padding: 0 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1f2933;
+  line-height: 1.7;
+}
+
+.privacy-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+    color: #6b7280;
+  }
+}
+
+.privacy-content {
+  section {
+    margin-bottom: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: #111827;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #374151;
+  }
+
+  ul {
+    margin: 1rem 0 1rem 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+      list-style: disc;
+      color: #374151;
+    }
+  }
+
+  .note {
+    font-size: 0.95rem;
+    color: #4b5563;
+    border-left: 4px solid #d1d5db;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .privacy-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .privacy-content h2 {
+    font-size: 1.25rem;
+  }
+}

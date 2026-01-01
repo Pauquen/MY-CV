@@ -134,9 +134,9 @@ export class Resume {
       desc: 'Certificado obtenido tras x horas en el curso brindado por la universidad..',
     },
     {
-      name: 'Certificado IA',
-      img: '',
-      desc: 'Certificado obtenido tras x horas en el curso brindado por la universidad..',
+      name: 'Desarrollo con IA',
+      img: '/images/certs/IA-1.png',
+      desc: 'Certificado obtenido tras 6 horas en el curso brindado por BIG SCHOOL en colaboracion con MoureDev',
     },
   ]
 
@@ -158,13 +158,13 @@ export class Resume {
   activities: Activity [] = [
     {
       name: 'NASA SPACE APPS 2025',
-      img: '',
+      img: '/images/activities/nasa.png',
       desc: 'Fui participe de la hackathon donde desarrolle junto a mi equipo un software web demostrativo para simulacion educativa basico.',
       link: '',
     },
     {
       name: 'HACK4EDU 2025',
-      img: '',
+      img: '/images/activities/hackedu.png',
       desc: 'Participe en la hackathon junto a mi equipo multidisciplinario, desarrollando una pagina web para la evaluacion de educacion y bienestar estudiantil psicologico.',
       link: '',
     },

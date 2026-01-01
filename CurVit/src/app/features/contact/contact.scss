@@ -28,7 +28,7 @@
             rgba(0,0,0,0.55),
             rgba(0,0,0,0.55)
             ),
-            url('/assets/img/projects-bg.jpg');
+            url('/images/contact/CONTACT.png');
 
         background-size: cover;
         background-position: center;
@@ -67,7 +67,7 @@
         display: block;
         flex-direction: column;
         max-width: 100%;
-        width: clamp(48px, 10vw, 80px);
+        width: 20rem;
         height: auto;
       }
 

@@ -4,6 +4,7 @@ import { About } from './features/about/about';
 import { Resume } from './features/resume/resume';
 import { Projects } from './features/projects/projects';
 import { Contact } from './features/contact/contact';
+import { Privacy } from './features/privacy/privacy';
 
 export const routes: Routes = [
     {path: 'home', component: Home},
@@ -11,6 +12,7 @@ export const routes: Routes = [
     {path: 'resume', component: Resume},
     {path: 'projects', component: Projects},
     {path: 'contact', component: Contact},
+    {path: 'privacy', component: Privacy},
     {path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 

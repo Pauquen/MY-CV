@@ -127,6 +127,11 @@
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
         }
       }
+      
+      .cert-img {
+        width: auto;
+        height: 10rem;
+      }
     }
   }
 
@@ -168,6 +173,11 @@
           box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
         }
       }
+
+      .activity-img {
+        width: auto;
+        height: 10rem;
+      }
     }
   }
 
@@ -194,7 +204,7 @@
         display: block;
         flex-direction: column;
         max-width: 100%;
-        width: clamp(48px, 10vw, 80px);
+        width: 15rem;
         height: auto;
       }
     }
@@ -307,7 +317,7 @@
     flex-direction: column;
     max-width: 100%;
     width: auto;
-    height: 10rem;
+    height: auto;
   }
 }
 

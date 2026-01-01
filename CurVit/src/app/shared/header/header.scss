@@ -32,9 +32,11 @@
     }
 
     .logo-img {
-      width: 56px;
-      height: 56px;
+      width: auto;
+      background-color: transparent;
+      height: 2rem;
       border-radius: 50%;
+      padding: 0.15rem;
       object-fit: cover;
       border: 2px solid #9580FF;
       box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);

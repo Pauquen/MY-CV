@@ -104,7 +104,7 @@ section {
   display: flex;
   flex-direction: column;
   margin: 0.2rem 0 0.2rem 0;
-  width: clamp(48px, 10vw, 80px);
+  width: auto;
   height: auto;
 }
 
