@@ -1,13 +1,52 @@
 <!doctype html>
-<html lang="en" data-beasties-container>
-<head>
-  <meta charset="utf-8">
-  <title>PauloDEV</title>
-  <base href="/MY-CV/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-<style>:root{--color-primario:#7C83B3;--color-secundario:#9F8BCC;--color-acento:#6C63FF;--color-fondo:#F0F2F5;--color-texto:#4A5568}body{background-color:var(--color-fondo);font-family:Segoe UI,sans-serif}:root{--color-primario:#7E69D2;--color-secundario:#9580FF;--color-acento:#5E4AE3;--color-fondo-claro:#FFFFFF;--color-fondo-oscuro:#0F1423;--color-texto-claro:#2D3748;--color-texto-oscuro:#F7FAFC}:root{--color-primario:#7C83B3;--color-secundario:#9F8BCC;--color-acento:#6C63FF;--color-fondo:#F0F2F5;--color-surface:#FFFFFF;--color-surface-2:#F8FAFC;--color-texto-primario:#2D3748;--color-texto-secundario:#718096;--color-texto-terciario:#A0AEC0;--color-exito:#68D391;--color-alerta:#F6AD55;--color-error:#FC8181;--color-info:#7C83B3;--color-borde:#E2E8F0;--color-borde-2:#CBD5E1;--color-divisor:#F1F5F9}</style><link rel="stylesheet" href="styles-Q26TBYWM.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-Q26TBYWM.css"></noscript></head>
-<body>
-  <app-root></app-root>
-<script src="main-HL6AOFHU.js" type="module"></script></body>
+<html lang="es" data-beasties-container>
+  <head>
+    <meta charset="utf-8">
+    <title>Paulo Quenta | CV — Ingeniería de Sistemas e Industrial</title>
+    <base href="/MY-CV/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CV de Paulo Estefano Quenta Ahumada, estudiante de Ingeniería de Sistemas e Ingeniería Industrial en la UNSA. Proyectos, habilidades, certificaciones y contacto.">
+    <meta name="author" content="Paulo Estefano Quenta Ahumada">
+    <meta name="theme-color" content="#f5f9fb">
+
+    <meta property="og:title" content="Paulo Quenta | CV">
+    <meta property="og:description" content="Estudiante de Ingeniería de Sistemas e Industrial en la UNSA. IA, análisis de datos y proyectos.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/foto-perfil-900.webp">
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preload" as="font" type="font/woff2" href="fonts/space-grotesk-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/inter-latin.woff2" crossorigin>
+    <link rel="preload" as="font" type="font/woff2" href="fonts/fraunces-latin.woff2" crossorigin>
+    <link rel="preload" as="image" href="images/foto-perfil-900.webp" imagesrcset="images/foto-perfil-480.webp 480w, images/foto-perfil-900.webp 900w" imagesizes="(max-width: 900px) 240px, 380px" fetchpriority="high">
+
+    <script>
+      // Aplica el tema antes de que Angular arranque para evitar un destello blanco.
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset['theme'] = dark ? 'dark' : 'light';
+        } catch (error) {
+          document.documentElement.dataset['theme'] = 'light';
+        }
+
+        // Idioma inicial: preferencia guardada o idioma del navegador.
+        try {
+          var lang = localStorage.getItem('lang');
+          if (lang !== 'es' && lang !== 'en') {
+            lang = (navigator.language || 'es').toLowerCase().indexOf('en') === 0 ? 'en' : 'es';
+          }
+          document.documentElement.lang = lang;
+        } catch (error) {
+          document.documentElement.lang = 'es';
+        }
+      })();
+    </script>
+  <style>@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Inter;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/inter-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Space Grotesk;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/space-grotesk-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Space Grotesk;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/space-grotesk-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:JetBrains Mono;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/jetbrains-mono-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:JetBrains Mono;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/jetbrains-mono-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:Fraunces;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/fraunces-latin-ext.woff2) format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C4,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Fraunces;font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/fraunces-latin.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{color-scheme:light;--header-h:72px;--gutter:clamp(1.25rem, 4vw, 2.5rem);--maxw:1120px;--radius:18px;--radius-sm:12px;--radius-lg:28px;--font-sans:"Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;--font-display:"Space Grotesk", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;--font-mono:"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;--font-serif:"Fraunces", "Iowan Old Style", "Palatino Linotype", Georgia, serif;--bg:#f5f9fb;--surface:#ffffff;--surface-2:#eaf4f7;--surface-3:#dceff3;--text:#0d2433;--muted:#557083;--border:#d5e5eb;--primary:#0e7490;--primary-strong:#0b5f78;--primary-soft:#cff3f7;--on-primary:#ffffff;--accent:#7c5cd6;--accent-strong:#5b3fb0;--accent-soft:#ede8ff;--gradient:linear-gradient(135deg, #0e7490 0%, #14a3a8 55%, #7c5cd6 100%);--shadow-sm:0 1px 2px rgba(13, 36, 51, .05), 0 10px 28px rgba(13, 36, 51, .06);--shadow-md:0 20px 50px rgba(13, 36, 51, .12);--focus:#0e7490;--contact-bg:linear-gradient(135deg, #073b4c 0%, #0b5f78 45%, #3b2a6b 100%)}*,*:before,*:after{box-sizing:border-box}html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}@media(max-width:720px){:root{--header-h:64px}}body{min-height:100vh;margin:0;background-color:var(--bg);background-image:radial-gradient(60rem 40rem at 12% -10%,rgba(14,116,144,.1),transparent 60%),radial-gradient(50rem 35rem at 100% 0%,rgba(124,92,214,.08),transparent 60%);background-attachment:fixed;color:var(--text);font-family:var(--font-sans);line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}*{scrollbar-width:thin;scrollbar-color:var(--surface-3) transparent}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}@media print{@page{margin:14mm}:root{--bg:#ffffff;--surface:#ffffff;--surface-2:#ffffff;--surface-3:#ffffff;--text:#000000;--muted:#333333;--border:#cccccc}body{background:#fff}}</style><link rel="stylesheet" href="styles-NKMII3E7.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles-NKMII3E7.css"></noscript></head>
+  <body>
+    <app-root></app-root>
+  <script src="main-LOIUCSPZ.js" type="module"></script></body>
 </html>
