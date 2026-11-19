@@ -1,13 +1,83 @@
 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>PauloDEV</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
-<body>
-  <app-root></app-root>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Paulo Quenta | CV — Ingeniería de Sistemas e Industrial</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="CV de Paulo Estefano Quenta Ahumada, estudiante de Ingeniería de Sistemas e Ingeniería Industrial en la UNSA. Proyectos, habilidades, certificaciones y contacto."
+    />
+    <meta name="author" content="Paulo Estefano Quenta Ahumada" />
+    <meta name="theme-color" content="#f5f9fb" />
+
+    <meta property="og:title" content="Paulo Quenta | CV" />
+    <meta
+      property="og:description"
+      content="Estudiante de Ingeniería de Sistemas e Industrial en la UNSA. IA, análisis de datos y proyectos."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/foto-perfil-900.webp" />
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="fonts/space-grotesk-latin.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="fonts/inter-latin.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="fonts/fraunces-latin.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="images/foto-perfil-900.webp"
+      imagesrcset="images/foto-perfil-480.webp 480w, images/foto-perfil-900.webp 900w"
+      imagesizes="(max-width: 900px) 240px, 380px"
+      fetchpriority="high"
+    />
+
+    <script>
+      // Aplica el tema antes de que Angular arranque para evitar un destello blanco.
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset['theme'] = dark ? 'dark' : 'light';
+        } catch (error) {
+          document.documentElement.dataset['theme'] = 'light';
+        }
+
+        // Idioma inicial: preferencia guardada o idioma del navegador.
+        try {
+          var lang = localStorage.getItem('lang');
+          if (lang !== 'es' && lang !== 'en') {
+            lang = (navigator.language || 'es').toLowerCase().indexOf('en') === 0 ? 'en' : 'es';
+          }
+          document.documentElement.lang = lang;
+        } catch (error) {
+          document.documentElement.lang = 'es';
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
 </html>

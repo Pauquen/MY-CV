@@ -1,30 +1,23 @@
-<div class="projects">
+<section id="proyectos" class="section section--alt">
+  <div class="container">
+    <app-section-header
+      [eyebrow]="copy.sections.projects.eyebrow"
+      [title]="copy.sections.projects.title"
+      [description]="copy.sections.projects.description"
+    ></app-section-header>
 
-    <div class="projects-presentation">
-        <h2 class="projects-title"> Proyectos </h2>
-        <p class="projects-intro">
-            Conoce algunos de mis proyectos que he desarrollado 
-        </p>
-    </div>
-
-    <div class="projects-section">
-        <div class="project-grid">
-            <div class="project-card"
-                 *ngFor="let project of getProjects()"
-                 (click)="openProject(project)"
-            > 
-                <div class="project-image-wrapper">
-                    <img [src]="project.img" alt="project-img" class="project-img"/>
-                </div>               
-                
-                <h3 class="project-title">
-                    {{ project.name }}
-                </h3>
-
-                <p class="project-phrase">
-                    {{ project.info }}
-                </p>
-            </div>
+    <div class="projects__grid">
+      @for (project of projects; track project.title) {
+        <div class="projects__item" [class.projects__item--featured]="project.featured" appReveal>
+          <app-project-card [project]="project"></app-project-card>
         </div>
+      }
     </div>
-</div>
+
+    <p class="projects__note" appReveal>
+      {{ copy.projectsNote.before }}
+      <a href="#contacto">{{ copy.projectsNote.link }}</a
+      >{{ copy.projectsNote.after }}
+    </p>
+  </div>
+</section>

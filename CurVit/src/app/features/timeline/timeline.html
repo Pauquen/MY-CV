@@ -1,0 +1,35 @@
+<section id="trayectoria" class="section section--alt">
+  <div class="container">
+    <app-section-header
+      [eyebrow]="copy.sections.timeline.eyebrow"
+      [title]="copy.sections.timeline.title"
+      [description]="copy.sections.timeline.description"
+    ></app-section-header>
+
+    <ol class="timeline">
+      @for (item of items; track item.title; let index = $index) {
+        <li class="timeline__item" appReveal>
+          <span class="timeline__marker" aria-hidden="true">
+            <app-icon [name]="item.icon" [size]="18"></app-icon>
+          </span>
+
+          <article class="timeline__content">
+            <div class="timeline__top">
+              <span class="timeline__period">{{ item.period }}</span>
+              <span class="timeline__kind">{{ kindLabel(item.kind) }}</span>
+              <span class="sr-only">{{ copy.ui.labels.milestonePrefix }} {{ index + 1 }}</span>
+            </div>
+            <h3>{{ item.title }}</h3>
+            <p class="timeline__org">{{ item.org }}</p>
+            <p>{{ item.description }}</p>
+            <ul class="timeline__tags" [attr.aria-label]="copy.ui.labels.tags">
+              @for (tag of item.tags; track tag) {
+                <li>{{ tag }}</li>
+              }
+            </ul>
+          </article>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

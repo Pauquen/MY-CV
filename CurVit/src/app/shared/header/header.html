@@ -1,34 +1,91 @@
-<header class="header">
-  <nav class="nav">
-    <!-- 🔹 Logo personal -->
-    <div class="logo" routerLink="/">
-      <img src="/images/logo.png" alt="Logo personal" class="logo-img" />
-      <span class="logo-text">PauloDev</span>
+<header class="site-header" [class.is-scrolled]="scrolled()">
+  <div class="container header__inner">
+    <a class="brand" routerLink="/" fragment="inicio" (click)="closeMenu()" [attr.aria-label]="copy.ui.actions.backToTop">
+      @if (!logoFailed()) {
+        <img
+          class="brand__logo"
+          src="images/logo-160.webp"
+          alt=""
+          width="40"
+          height="40"
+          (error)="logoFailed.set(true)"
+        />
+      } @else {
+        <span class="brand__mark" aria-hidden="true">PQ</span>
+      }
+      <span class="brand__text">
+        <strong>Paulo Quenta</strong>
+        <small>{{ copy.ui.labels.brandTag }}</small>
+      </span>
+    </a>
+
+    <nav class="nav" [attr.aria-label]="copy.ui.navLabel">
+      @for (link of links; track link.id) {
+        <a
+          [routerLink]="['/']"
+          [fragment]="link.id"
+          [class.active]="activeSection() === link.id"
+          [attr.aria-current]="activeSection() === link.id ? 'location' : null"
+          (click)="closeMenu()"
+        >
+          {{ link.label }}
+        </a>
+      }
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Idioma / Language">
+        <button
+          type="button"
+          [class.is-active]="i18n.lang() === 'es'"
+          [attr.aria-pressed]="i18n.lang() === 'es'"
+          (click)="i18n.setLang('es')"
+        >
+          ES
+        </button>
+        <button
+          type="button"
+          [class.is-active]="i18n.lang() === 'en'"
+          [attr.aria-pressed]="i18n.lang() === 'en'"
+          (click)="i18n.setLang('en')"
+        >
+          EN
+        </button>
+      </div>
+
+      <app-theme-toggle></app-theme-toggle>
+      <button
+        type="button"
+        class="menu-button"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? copy.ui.menuClose : copy.ui.menuOpen"
+        aria-controls="mobile-menu"
+      >
+        <app-icon [name]="menuOpen() ? 'close' : 'menu'" [size]="21"></app-icon>
+      </button>
     </div>
-
-    <!-- 🔹 Navegación desktop - FALTA IMPLEMENTAR BLOG -->
-    <ul class="nav-links">
-      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Inicio</a></li>
-      <li><a routerLink="/about" routerLinkActive="active">Sobre mí</a></li>
-      <li><a routerLink="/resume" routerLinkActive="active">Portfolio</a></li>
-      <!--<li><a routerLink="/blog" routerLinkActive="active">Blog</a></li>-->
-      <li><a routerLink="/projects" routerLinkActive="active">Proyectos</a></li>
-      <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
-    </ul>
-
-    <!-- 🔹 Botón hamburguesa (móvil) -->
-    <button class="menu-toggle" (click)="toggleMenu()">
-      <i class="bi" [ngClass]="menuOpen ? 'bi-x-lg' : 'bi-list'"></i>
-    </button>
-  </nav>
-
-  <!-- 🔹 Menú móvil -->
-  <div class="mobile-menu" *ngIf="menuOpen">
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">Inicio</a>
-    <a routerLink="/about" (click)="toggleMenu()">Sobre mí</a>
-    <a routerLink="/resume" (click)="toggleMenu()">Portfolio</a>
-    <a routerLink="/blog" (click)="toggleMenu()">Blog</a>
-    <a routerLink="/projects" (click)="toggleMenu()">Proyectos</a>
-    <a routerLink="/contact" (click)="toggleMenu()">Contacto</a>
   </div>
+
+  @if (menuOpen()) {
+    <div id="mobile-menu" class="mobile-menu">
+      <nav [attr.aria-label]="copy.ui.navLabel">
+        @for (link of links; track link.id) {
+          <a
+            [routerLink]="['/']"
+            [fragment]="link.id"
+            [class.active]="activeSection() === link.id"
+            [attr.aria-current]="activeSection() === link.id ? 'location' : null"
+            (click)="closeMenu()"
+          >
+            {{ link.label }}
+          </a>
+        }
+      </nav>
+      <a class="btn btn--primary mobile-menu__cta" routerLink="/" fragment="contacto" (click)="closeMenu()">
+        {{ copy.ui.actions.contact }}
+        <app-icon name="arrow-right" [size]="17"></app-icon>
+      </a>
+    </div>
+  }
 </header>

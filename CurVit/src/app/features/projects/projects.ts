@@ -1,51 +1,24 @@
-import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-
-export interface Project {
-  img: string;
-  name: string;
-  info: string;
-  link: string;
-}
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { LanguageService } from '../../core/i18n/language.service';
+import { RevealDirective } from '../../shared/directives/reveal.directive';
+import { ProjectCard } from '../../shared/ui/project-card/project-card';
+import { SectionHeader } from '../../shared/ui/section-header/section-header';
 
 @Component({
   selector: 'app-projects',
-  imports: [CommonModule],
+  imports: [ProjectCard, RevealDirective, SectionHeader],
   templateUrl: './projects.html',
-  styleUrl: './projects.scss'
+  styleUrl: './projects.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Projects {
+  private readonly i18n = inject(LanguageService);
 
-  // LOGICA PARA REDIRIGIR AL PROYECTO QUE SE HACE CLICK
-  selectedProject: Project | null = null;
-
-  projects: Project[] = [
-    {
-      img: '/images/projects/GROB-POST.png',
-      name: 'Grob-Post',
-      info: 'Web para horarios grupales e individuales y posts',
-      link: 'https://grob-post.netlify.app/',
-    },
-    {
-      img: '',
-      name: 'Desarrollando...',
-      info: '...',
-      link: 'https://google.com',
-    },
-    {
-      img: '',
-      name: 'Desarrollando...',
-      info: '...',
-      link: 'https://google.com',
-    },
-  ]
-
-  openProject(project: Project){
-    this.selectedProject = project
-    window.open(project.link, '_blank');
+  get projects() {
+    return this.i18n.content().projects;
   }
 
-  getProjects() {
-    return this.projects;
+  get copy() {
+    return this.i18n.content();
   }
 }

@@ -1,0 +1,18 @@
+<ul class="social-links" [class.social-links--icons]="!showLabels()">
+  @for (link of links(); track link.label) {
+    <li>
+      <a
+        [href]="link.href"
+        [attr.target]="link.external ? '_blank' : null"
+        [attr.rel]="link.external ? 'noopener noreferrer' : null"
+        [attr.aria-label]="showLabels() ? null : link.label"
+        [attr.title]="showLabels() ? null : link.label"
+      >
+        <app-icon [name]="link.icon" [size]="17"></app-icon>
+        @if (showLabels()) {
+          <span>{{ link.label }}</span>
+        }
+      </a>
+    </li>
+  }
+</ul>

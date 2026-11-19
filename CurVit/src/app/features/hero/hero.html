@@ -1,0 +1,93 @@
+<section id="inicio" class="hero">
+  <app-data-backdrop></app-data-backdrop>
+
+  <div class="container hero__grid">
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        <span class="hero__dot" aria-hidden="true"></span>
+        {{ copy.hero.greeting }}
+      </p>
+
+      <h1>
+        Paulo Estefano
+        <span>Quenta Ahumada</span>
+      </h1>
+
+      <p class="hero__role">
+        {{ profile.role }}
+        <span>· {{ profile.universityShort }}</span>
+      </p>
+
+      <p class="hero__phrase">{{ profile.heroPhrase }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" routerLink="/" fragment="proyectos">
+          {{ copy.ui.actions.viewProjects }}
+          <app-icon name="arrow-right" [size]="18"></app-icon>
+        </a>
+        <a class="btn btn--secondary" routerLink="/" fragment="contacto">
+          {{ copy.ui.actions.contact }}
+        </a>
+      </div>
+
+      <ul class="hero__meta" [attr.aria-label]="copy.ui.labels.quickFacts">
+        <li>
+          <app-icon name="map-pin" [size]="16"></app-icon>
+          {{ profile.location }}
+        </li>
+        <li>
+          <app-icon name="graduation" [size]="16"></app-icon>
+          {{ profile.cycle }}
+        </li>
+        <li>
+          <app-icon name="sparkles" [size]="16"></app-icon>
+          {{ profile.focus.join(' · ') }}
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <figure
+        class="hero__photo"
+        [class.hero__photo--portrait]="profile.photo.shape === 'portrait'"
+      >
+        @if (!photoFailed()) {
+          <img
+            [src]="profile.photo.src"
+            [attr.srcset]="profile.photo.srcset"
+            [attr.sizes]="profile.photo.sizes"
+            [alt]="profile.photo.alt"
+            [style.object-position]="profile.photo.position"
+            width="900"
+            height="1200"
+            fetchpriority="high"
+            decoding="async"
+            (error)="onPhotoError()"
+          />
+        } @else {
+          <div class="hero__initials" role="img" [attr.aria-label]="profile.fullName">
+            {{ profile.initials }}
+          </div>
+        }
+      </figure>
+
+      <span class="hero__badge hero__badge--one">
+        <app-icon name="sparkles" [size]="15"></app-icon>
+        {{ copy.hero.badgeFocus }}
+      </span>
+      <span class="hero__badge hero__badge--two">
+        <app-icon name="award" [size]="15"></app-icon>
+        {{ copy.hero.badgeHackathons }}
+      </span>
+    </div>
+  </div>
+
+  <a
+    class="hero__scroll"
+    routerLink="/"
+    fragment="sobre-mi"
+    [attr.aria-label]="copy.hero.scrollAria"
+  >
+    <app-icon name="chevron-down" [size]="20"></app-icon>
+  </a>
+</section>

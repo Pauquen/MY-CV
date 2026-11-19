@@ -1,18 +1,12 @@
 import { Routes } from '@angular/router';
 import { Home } from './features/home/home';
-import { About } from './features/about/about';
-import { Resume } from './features/resume/resume';
-import { Projects } from './features/projects/projects';
-import { Contact } from './features/contact/contact';
-import { Privacy } from './features/privacy/privacy';
 
+/**
+ * Una sola página: todas las secciones viven dentro de Home y se navegan
+ * con anclas (#sobre-mi, #proyectos, etc.).
+ * Las rutas antiguas se redirigen a la portada.
+ */
 export const routes: Routes = [
-    {path: 'home', component: Home},
-    {path: 'about', component: About},
-    {path: 'resume', component: Resume},
-    {path: 'projects', component: Projects},
-    {path: 'contact', component: Contact},
-    {path: 'privacy', component: Privacy},
-    {path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', component: Home, pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
-

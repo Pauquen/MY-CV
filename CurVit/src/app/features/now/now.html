@@ -1,0 +1,50 @@
+<section id="ahora" class="section section--alt now">
+  <div class="container">
+    <app-section-header
+      [eyebrow]="copy.sections.now.eyebrow"
+      [title]="copy.sections.now.title"
+      [description]="copy.sections.now.description"
+    ></app-section-header>
+
+    <p class="now__updated">{{ copy.now.updated }}</p>
+
+    <ol class="now__steps">
+      @for (step of steps; track step.title) {
+        <li class="now-step" [style.--step-color]="step.color" appReveal>
+          <span class="now-step__status">{{ step.label }}</span>
+
+          <span class="now-step__icon" aria-hidden="true">
+            <app-icon [name]="step.icon" [size]="19"></app-icon>
+          </span>
+
+          <h3>{{ step.title }}</h3>
+          <p>{{ step.detail }}</p>
+
+          <ul class="now-step__tools" [attr.aria-label]="copy.ui.labels.technologiesUsed">
+            @for (tool of step.tools; track tool) {
+              <li>{{ tool }}</li>
+            }
+          </ul>
+
+          @if (step.link) {
+            <a class="now-step__link" [href]="step.link">
+              {{ copy.ui.actions.viewProjects }}
+              <span aria-hidden="true">→</span>
+            </a>
+          }
+        </li>
+      }
+    </ol>
+
+    @if (nextSteps.length) {
+      <p class="now__next">
+        <span class="now__next-label">{{ copy.ui.labels.nextUp }}</span>
+        @for (step of nextSteps; track step; let last = $last) {
+          <span>{{ step }}{{ last ? '' : ' · ' }}</span>
+        }
+      </p>
+    }
+
+    <p class="now__note">{{ copy.now.note }}</p>
+  </div>
+</section>

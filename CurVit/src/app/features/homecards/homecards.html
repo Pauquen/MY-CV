@@ -1,61 +1,83 @@
 <div class="home-container">
-
   <!-- Sección 1: Sobre mí -->
   <section class="about" id="about">
     <h2>Sobre mí</h2>
-    <p>Soy Estudiante de Ingenieria de Sistemas, cursando actualmente el 4to semestre, poseo habilidades duras asi como habilidades blandas
-       tengo conocimiento sobre frameworks de desarrollo backend y frontend, soy entusiasta y me gusta la innovacion y el espacio :v</p>
+    <p>
+      Soy Estudiante de Ingenieria de Sistemas, cursando actualmente el 6to semestre y Estudiante de
+      Ingenieria Industrial cursando primeros anios, poseo habilidades duras asi como habilidades
+      blandas tengo conocimiento sobre frameworks de desarrollo backend y frontend, soy entusiasta y
+      me gusta la innovacion y el analisis de datos.
+    </p>
   </section>
 
   <!-- Sección 2: Habilidades -->
   <section class="skills" id="skills">
     <h2>Habilidades</h2>
     <div class="skills-grid">
-
-      <div class="skill-card">Frontend
+      <div class="skill-card">
+        Frontend
         <div class="skill-inner">
-          <div class="skill">Angular
-            <img class="img" src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular-logo">
+          <div class="skill">
+            Angular
+            <img class="img" src="https://cdn.simpleicons.org/angular/DD0031" alt="Angular-logo" />
           </div>
 
-          <div class="skill">HTML
-           <img class="img" src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5-logo">
+          <div class="skill">
+            HTML
+            <img class="img" src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5-logo" />
           </div>
 
-          <div class="skill">CSS
-            <img class="img" src="https://cdn.simpleicons.org/css/1572B6" alt="CSS-logo">
+          <div class="skill">
+            CSS
+            <img class="img" src="https://cdn.simpleicons.org/css/1572B6" alt="CSS-logo" />
           </div>
         </div>
       </div>
 
-      <div class="skill-card">Backend
+      <div class="skill-card">
+        Backend
         <div class="skill-inner">
-          <div class="skill">Java
-            <img class="img" src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java-logo">
+          <div class="skill">
+            Java
+            <img
+              class="img"
+              src="https://www.vectorlogo.zone/logos/java/java-icon.svg"
+              alt="Java-logo"
+            />
           </div>
 
-          <div class="skill">Python
-           <img class="img" src="https://cdn.simpleicons.org/python/3776AB" alt="Python-logo">
+          <div class="skill">
+            Python
+            <img class="img" src="https://cdn.simpleicons.org/python/3776AB" alt="Python-logo" />
           </div>
 
-          <div class="skill">Django
-            <img class="img" src="https://cdn.simpleicons.org/django/092E20" alt="Django-logo">
+          <div class="skill">
+            Django
+            <img class="img" src="https://cdn.simpleicons.org/django/092E20" alt="Django-logo" />
           </div>
 
-          <div class="skill">NodeJS
-            <img class="img" src="https://cdn.simpleicons.org/nodedotjs/339933" alt="NodeJS-logo">
+          <div class="skill">
+            NodeJS
+            <img class="img" src="https://cdn.simpleicons.org/nodedotjs/339933" alt="NodeJS-logo" />
           </div>
         </div>
       </div>
 
-      <div class="skill-card">Bases de datos
-          <div class="skill-inner">
-            <div class="skill">PostgreSQL
-              <img class="img" src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL-logo">
-            </div>
+      <div class="skill-card">
+        Bases de datos
+        <div class="skill-inner">
+          <div class="skill">
+            PostgreSQL
+            <img
+              class="img"
+              src="https://cdn.simpleicons.org/postgresql/4169E1"
+              alt="PostgreSQL-logo"
+            />
           </div>
+        </div>
       </div>
 
+      <!--
       <div class="skill-card">IA
           <div class="skill-inner">
             <div class="skill">PySpark
@@ -63,6 +85,7 @@
             </div>
           </div>
       </div>
+      -->
     </div>
   </section>
 
@@ -70,16 +93,18 @@
   <section class="projects" id="projects">
     <h2>Proyectos</h2>
     <div class="projects-grid">
-      <div class="project-card">Grob-Post
+      <div class="project-card">
+        Grob-Post
 
         <div class="project-photo">
-          <img src="/images/projects/GROB-POST.png" alt="Grob-Post-Demostration">
+          <img src="/images/projects/GROB-POST.png" alt="Grob-Post-Demostration" />
         </div>
 
         <div class="project-desc">
-          <p> Grob-Post es un proyecto que desarrolle pensando en la organizacion
-              del tiempo y cuestion de horarios para trabajo grupal e individual, 
-              dandole el agregado de tener un apartado para realizar posts.
+          <p>
+            Grob-Post es un proyecto que desarrolle pensando en la organizacion del tiempo y
+            cuestion de horarios para trabajo grupal e individual, dandole el agregado de tener un
+            apartado para realizar posts.
           </p>
         </div>
 
@@ -88,7 +113,6 @@
           <span class="tech-tag-d">Django</span>
           <span class="tech-tag-p">PostgreSQL</span>
         </div>
-
       </div>
       <div class="project-card">Proyecto 2</div>
       <div class="project-card">Proyecto 3</div>
@@ -103,32 +127,35 @@
         <div class="cert-title">Certificaciones</div>
 
         <div class="cert-info">
-          <p> En esta seccion se presentan los certificados que 
-            respaldan mi formacion profesional, en los distintos ambitos 
-            donde me enfoco en desarrollar mis habilidades.
+          <p>
+            En esta seccion se presentan los certificados que respaldan mi formacion profesional, en
+            los distintos ambitos donde me enfoco en desarrollar mis habilidades.
           </p>
         </div>
 
         <div class="cert-buttom">
-            <button class="buttom-cert" [routerLink]="['/resume']" fragment="certs-sec">Hecha un vistazo</button>
+          <button class="buttom-cert" [routerLink]="['/resume']" fragment="certs-sec">
+            Hecha un vistazo
+          </button>
         </div>
       </div>
 
       <div class="certs-card">
         <div class="cert-title">Actividad</div>
-        
+
         <div class="cert-info">
-          <p> En esta seccion se presentan los certificados en participacion 
-              de eventos de programacion y/o eventos con respecto a actividades
-              en general
+          <p>
+            En esta seccion se presentan los certificados en participacion de eventos de
+            programacion y/o eventos con respecto a actividades en general
           </p>
         </div>
 
         <div class="cert-buttom">
-            <button class="buttom-cert" [routerLink]="['/resume']" fragment="activity-sec">Hecha un vistazo</button>
+          <button class="buttom-cert" [routerLink]="['/resume']" fragment="activity-sec">
+            Hecha un vistazo
+          </button>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -138,5 +165,4 @@
     <p>¿Quieres colaborar conmigo o tienes un proyecto en mente?</p>
     <button class="contact-btn" [routerLink]="['/contact']">Contáctame</button>
   </section>
-
 </div>
